@@ -7,8 +7,6 @@ import android.content.Context;
 
 
 /**
- *
- *
  * @author THIENNN
  */
 public class MyRestHelperMockup extends MyRestHelper {

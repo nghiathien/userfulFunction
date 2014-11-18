@@ -3,8 +3,6 @@ package per.thiennn.myuserfulfunction.connection.rest;
 import android.content.Context;
 
 /**
- * 
- * 
  * @author THIENNN
  */
 public class MyRestHelper {

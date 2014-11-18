@@ -1,6 +1,3 @@
-/**
- * 
- */
 package per.thiennn.myuserfulfunction.connection.response;
 
 import java.io.Serializable;
@@ -8,9 +5,7 @@ import java.io.Serializable;
 import com.google.gson.annotations.SerializedName;
 
 /**
- *
- *
- * @author ThuongTD
+ * @author ThienNN
  */
 @SuppressWarnings("serial")
 public class BaseResponse implements Serializable {

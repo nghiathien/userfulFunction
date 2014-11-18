@@ -1,13 +1,8 @@
-/**
- * 
- */
 package per.thiennn.myuserfulfunction.connection.response;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- *
- *
  * @author ThienNN
  */
 @SuppressWarnings("serial")

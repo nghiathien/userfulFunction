@@ -4,8 +4,6 @@ import per.thiennn.myuserfulfunction.connection.response.BaseResponse;
 import per.thiennn.myuserfulfunction.utils.ErrorMessage;
 
 /**
- *
- *
  * @author THIENNN
  */
 public class MyResponseHandler {
