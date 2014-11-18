@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -243,6 +244,18 @@ public class Utils {
         if (edTarget.getText().length()<minLeng) {
             edTarget.setError(errorContent);
         }
+    }
+    /*************************************************************************************************************************************/
+    /*********************************** Validate functions ******************************************************************************/
+    /**@nonjavadoc
+     * ThienNN
+     * Get a random value
+     */
+    public static int getRandomVal() 
+    {
+    	 Random r = new Random();
+         return (r.nextInt(5 - 0) + 0);
+         /* Return random val between (5-1) and 0 : 0-1-2-3-4 */
     }
     /*************************************************************************************************************************************/
     

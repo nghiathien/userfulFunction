@@ -2,6 +2,7 @@ package per.thiennn.myusefulfunction;
 
 import per.thiennn.myuserfulfunction.connection.request.LoginParams;
 import per.thiennn.myuserfulfunction.createview.MyDialog;
+import per.thiennn.myuserfulfunction.localdatabase.DbAdapter;
 import per.thiennn.myuserfulfunction.utils.JsonUtils;
 import per.thiennn.myuserfulfunction.utils.Logger;
 import android.app.Activity;
@@ -21,6 +22,13 @@ public class MainActivity extends Activity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN| WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.SCREEN_ORIENTATION_CHANGED,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+    }
+    /**
+     * @nonJavadoc
+     * Create Database with dbHelper
+     */
+    private void initDatabase(){
+    	DbAdapter nDbAdapter = new DbAdapter(getApplicationContext());
     }
     /**@nonJava
      * Call dialog with init size

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="drop_database">DROP TABLE IF EXISTS TSHIFT;
+DROP TABLE IF EXISTS TSCHEDULE;
+DROP TABLE IF EXISTS TSHIFTDATE;</string>
+    <string name="init_database">/*
+ #======================
+ #create table shift
+ #======================
+*/
+CREATE TABLE \'TSHIFT\' (
+\'shift_id\' int(10) NOT NULL,
+\'shift_lable\' text(8) NOT NULL,
+\'shift_color\' text(2) NOT NULL default 1,
+\'shift_start\' text(6) NOT NULL,
+\'shift_end\' text(6) NOT NULL,
+\'shift_time\' text(6),
+\'shift_loop\' int(1)  DEFAULT 0,
+PRIMARY KEY(\'shift_id\') );
+
+INSERT INTO \'TSHIFT\' VALUES (1,\'日勤\',\'1\',\'8:30\',\'16:30\', \'00:00\',0);
+INSERT INTO \'TSHIFT\' VALUES (2,\'準夜勤\',\'2\',\'16:30\',\'0:30\', \'00:00\',0);
+INSERT INTO \'TSHIFT\' VALUES (3,\'深夜勤\',\'3\',\'0:30\',\'8:30\', \'00:00\',0);
+
+/*#======================
+ #create table shift added
+ #======================
+*/
+CREATE TABLE \'TSHIFTDATE\' (
+\'shift_id\' int(10) NOT NULL,
+\'shift_date\' int(8) DEFAULT 1 ,
+\'shift_month\' int(8) DEFAULT 1 ,
+\'shift_year\' int(8) DEFAULT 1990,
+\'shift_alarm\' int(8) DEFAULT 0
+);
+
+/*
+ # DATE : 2011/12/20
+ #
+ #======================
+ # 管理ファイル
+ #======================
+*/
+CREATE TABLE \'TSCHEDULE\' (
+\'schedule_id\' int(10) NOT NULL,
+\'schedule_date\' int(8) DEFAULT 1,
+\'schedule_month\' int(8) DEFAULT 1,
+\'schedule_year\' int(8) DEFAULT 1990,
+\'schedule_lable\' text(8) NOT NULL,
+\'schedule_icon\' text(2) NOT NULL default 1,
+\'schedule_start\' text(6) NOT NULL,
+\'schedule_end\' text(6) NOT NULL,
+\'schedule_time\' text(6) ,
+\'schedule_loop\' int(1) DEFAULT 0,
+PRIMARY KEY(\'schedule_id\') );
+
+</string>
+<string name="get_all_data_tshift">SELECT * FROM TSHIFT ORDER BY SHIFT_START ASC;</string>
+<string name="get_all_data_tdate">SELECT * FROM TSHIFTDATE;</string>
+<string name="get_all_data_tschedule">SELECT * FROM TSCHEDULE;</string>
+</resources>
